@@ -1,0 +1,33 @@
+<template name="listTodos">
+
+    {{> addTodo}}
+
+
+        <div class="todos-left">Todos Left: {{todosLeft}}</div>
+
+
+    <hr>
+
+    <ul class="list-unstyled">
+        {{#each todos}}
+        <li class="ui-state-default">
+            <div class="row">
+                <div class="checkbox">
+                    <div class="col-sm-10">
+                        <label>
+                            <input type="checkbox" name="checkDone" value="" checked="{{isDone}}"/>
+                            <a href="todos/{{_id}}">{{value}}</a>
+                        </label>
+                    </div>
+                    <div class="col-sm-2">
+                        <button class="btn btn-xs btn-primary pull-right" name="delete">delete</button>
+                    </div>
+                </div>
+
+            </div>
+        </li>
+        {{else}}
+        <li>No Todos Added</li>
+        {{/each}}
+    </ul>
+</template>

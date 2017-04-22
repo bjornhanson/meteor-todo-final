@@ -1,0 +1,19 @@
+<template name="addTodo">
+    {{#if currentUser}}
+    <div class="row">
+        <form class="form">
+            <div class="col-md-10">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="todo" placeholder="Add a todo">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-default pull-right">Add todo</button>
+            </div>
+        </form>
+    </div>
+
+    {{else}}
+    <h4>Sign In to Add List Items.</h4>
+    {{/if}}
+</template>
